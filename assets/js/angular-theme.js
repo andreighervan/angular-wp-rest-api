@@ -29,7 +29,7 @@ wpApp.config(function ($stateProvider, $urlRouterProvider) {
         })
 });
 
-wpApp.controller('DetailCtrl', ['$scope', '$stateParam', 'Posts', function ($scope, $stateParams, Posts) {
+wpApp.controller('DetailCtrl', ['$scope', '$stateParams', 'Posts', function ($scope, $stateParams, Posts) {
     Posts.get({ID: $stateParams.id}, function (res) {
         $scope.post = res;
     })
